@@ -29,7 +29,7 @@ public class IssueController {
     @PostMapping("/issue/save")
     public String saveIssue(Issue issue, RedirectAttributes redirectAttributes){
         issueService.save(issue);
-        redirectAttributes.addFlashAttribute("message", "The Issue has been saved succcessfully");
+        redirectAttributes.addFlashAttribute("message", "The Issue has been saved successfully");
         return "redirect:/issue/list";
     }
 
